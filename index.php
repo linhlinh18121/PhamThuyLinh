@@ -8,22 +8,15 @@
     <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="css/home.css">
     <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" href="fontawesome_free_5.13.0/css/all.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -37,24 +30,20 @@
     <link rel="manifest" href="favicon_io/site.webmanifest">
     <style>img[alt="www.000webhost.com"]{display: none;}</style>
 </head>
-
 <body>
     <!-- code cho nut like share facebook  -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
-
     <!-- header -->
     <nav class="navbar navbar-expand-md bg-white navbar-light">
         <div class="container">
             <!-- logo  -->
-            <a class="navbar-brand" href="index.html" style="color: #CF111A;"><b>HVNH</b>.edu.vn</a>
-
+            <a class="navbar-brand" href="index.php" style="color: #CF111A;"><b>HVNH</b>.edu.vn</a>
             <!-- navbar-toggler  -->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <!-- form tìm kiếm  -->
                 <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
@@ -68,7 +57,6 @@
                         </div>
                     </div>
                 </form>
-
                 <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
                     <div class="dropdown">
@@ -91,7 +79,7 @@
                             <i class="fa fa-shopping-cart"></i>
                             <div class="cart-amount">0</div>
                         </a>
-                        <a class="nav-link text-dark giohang text-uppercase" href="gio-hang.html"
+                        <a class="nav-link text-dark giohang text-uppercase" href="gio-hang.php"
                             style="display:inline-block">Giỏ
                             Hàng</a>
                     </li>
@@ -100,7 +88,6 @@
         </div>
     </nav>
     
-
     <!-- form dang ky khi click vao button tren header-->
     <div class="modal fade mt-5" id="formdangky" data-backdrop="static" tabindex="-1" aria-labelledby="dangky_tieude"
         aria-hidden="true">
@@ -122,32 +109,28 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="form-signup" class="form-signin mt-2">
+                    <form method="POST" action="xu_ly_dang_ki.php" id="form-signup" class="form-signin mt-2">
                         <div class="form-label-group">
                             <input type="text" class="form-control" placeholder="Nhập họ và tên" name="name" required
                                 autofocus>
-                        </div>
-                        <div class="form-label-group">
-                            <input type="text" class="form-control" placeholder="Nhập số điện thoại" name="phone"
-                                required>
                         </div>
                         <div class="form-label-group">
                             <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email"
                                 required>
                         </div>
                         <div class="form-label-group">
-                            <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="password"
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Nhập mật khẩu" name="password"
                                 required>
                         </div>
                         <div class="form-label-group mb-4">
-                            <input type="password" class="form-control" name="confirm_password"
-                                placeholder="Nhập lại mật khẩu" required>
+                            <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" name="confirm_password"
+                                required>
                         </div>
-                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white mt-3" type="submit"
+                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white mt-3" type="submit" name="dangki"
                             style="background: #F5A623">Đăng ký</button>
                         <hr class="mt-3 mb-2">
                         <div class="custom-control custom-checkbox">
-                            <p class="text-center">Bằng việc đăng ký, bạn đã đồng ý với DealBook về</p>
+                            <p class="text-center">Bằng việc đăng ký, bạn đã đồng ý với Nhà sách HVNH về</p>
                             <a href="#" class="text-decoration-none text-center" style="color: #F5A623">Điều khoản dịch
                                 vụ & Chính sách bảo mật</a>
                         </div>
@@ -156,8 +139,6 @@
             </div>
         </div>
     </div>
-
-
     <!-- form dang nhap khi click vao button tren header-->
     <div class="modal fade mt-5" id="formdangnhap" data-backdrop="static" tabindex="-1"
         aria-labelledby="dangnhap_tieude" aria-hidden="true">
@@ -179,37 +160,23 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="form-signin" class="form-signin mt-2">
+                    <form method="POST" action="xu_ly_dang_nhap.php" id="form-signin" class="form-signin mt-2">
                         <div class="form-label-group">
                             <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email"
                                 required autofocus>
                         </div>
-
                         <div class="form-label-group">
                             <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required>
                         </div>
-
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
-                            <a href="#" class="float-right text-decoration-none" style="color: #F5A623">Quên mật
-                                khẩu</a>
-                        </div>
-
-                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white" type="submit"
+                        
+                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white" type="submit" name="dang_nhap" 
                             style="background: #F5A623">Đăng nhập</button>
                         <hr class="my-4">
-                        <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
-                                class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
-                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
-                                class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-
     <!-- thanh tieu de "danh muc sach" + hotline + ho tro truc tuyen -->
     <section class="duoinavbar">
         <div class="container text-white">
@@ -235,7 +202,6 @@
             </div>
         </div>
     </section>
-
     <!-- noi dung danh muc sach(categories) + banner slider -->
     <section class="header bg-light">
         <div class="container">
@@ -263,7 +229,6 @@
                                     </div>
                                 </ul>
                             </li>
-
                             <li><a href="#">Khoa Ngân hàng</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
                                     <li class="liheader"><a href="#" class="header text-uppercase">Khoa Ngân hàng</a></li>
@@ -366,7 +331,6 @@
                                     </div>
                                 </ul>
                             </li>
-
                             <li><a href="#">Khoa Quản trị Kinh Doanh</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
                                     <li class="liheader"><a href="#" class="header text-uppercase">Khoa Quản trị Kinh Doanh</a></li>
@@ -447,7 +411,6 @@
             </div>
         </div>
     </section>
-
     <!-- khoi sach moi  -->
     <section class="_1khoi sachmoi bg-white">
         <div class="container">
@@ -683,7 +646,6 @@
             </div>
         </div>
     </section>
-
     <!-- khoi sach combo hot  -->
     <section class="_1khoi combohot mt-4">
         <div class="container">
@@ -919,7 +881,6 @@
             </div>
         </div>
     </section>
-
     <!-- khoi sach sap phathanh  -->
     <section class="_1khoi sapphathanh mt-4">
         <div class="container">
@@ -1029,8 +990,6 @@
             </div>
         </div>
     </section>
-
-
     <!-- div _1khoi -- khoi sachnendoc -->
     <section class="_1khoi sachnendoc bg-white mt-4">
         <div class="container">
@@ -1120,7 +1079,6 @@
             <hr>
         </div>
     </section>
-
     <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
     <section class="abovefooter text-white" style="background-color: #CF111A;">
         <div class="container">
@@ -1166,7 +1124,6 @@
             </div>
         </div>
     </section>
-
     <!-- footer  -->
     <footer>
         <div class="container py-4">
@@ -1210,13 +1167,10 @@
             </div>
         </div>
     </footer>
-
     <!-- nut cuon len dau trang -->
     <div class="fixed-bottom">
         <div class="btn btn-warning float-right rounded-circle nutcuonlen" id="backtotop" href="#"
             style="background:#CF111A;"><i class="fa fa-chevron-up text-white"></i></div>
     </div>
-
 </body>
-
 </html>
